@@ -1,0 +1,241 @@
+Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
+To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
+You can view your projects by running `gcloud projects list`.
+(base) ericforkuo1@cloudshell:~$ cd hacbio
+-bash: cd: hacbio: No such file or directory
+(base) ericforkuo1@cloudshell:~$ cd hackbio/
+(base) ericforkuo1@cloudshell:~/hackbio$ cd biocomputing/
+(base) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda --version
+conda 26.3.2
+(base) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda create -n funtools
+Do you accept the Terms of Service (ToS) for https://repo.anaconda.com/pkgs/main? [(a)ccept/(r)eject/(v)iew]: a
+Do you accept the Terms of Service (ToS) for https://repo.anaconda.com/pkgs/r? [(a)ccept/(r)eject/(v)iew]: a
+2 channel Terms of Service accepted
+Retrieving notices: done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.3.2
+    latest version: 26.5.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/ericforkuo1/miniconda3/envs/funtools
+
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate funtools
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda activate funtools
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda install figlet
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - figlet
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda update figlet
+2 channel Terms of Service accepted
+
+PackageNotInstalledError: Package is not installed in prefix.
+  prefix: /home/ericforkuo1/miniconda3/envs/funtools
+  package name: figlet
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ ^C
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ wget https://anaconda.org/search?q=figlet
+--2026-05-24 10:54:34--  https://anaconda.org/search?q=figlet
+Resolving anaconda.org (anaconda.org)... 104.19.144.37, 104.19.145.37, 2606:4700::6813:9125, ...
+Connecting to anaconda.org (anaconda.org)|104.19.144.37|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘search?q=figlet’
+
+search?q=figlet                                      [ <=>                                                                                                    ]   3.00K  --.-KB/s    in 0s      
+
+2026-05-24 10:54:34 (29.1 MB/s) - ‘search?q=figlet’ saved [3071]
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda list
+# packages in environment at /home/ericforkuo1/miniconda3/envs/funtools:
+#
+# Name                     Version          Build            Channel
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ figlet eric
+-bash: figlet: command not found
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda figlet eric
+usage: conda [-h] [-v] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'figlet' (choose from activate, check, clean, commands, compare, config, content-trust, create, deactivate, doctor, env, export, info, init, install, list, menuinst, notices, package, remove, rename, repoquery, run, search, token, tos, uninstall, update, upgrade)
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda run figlet
+/tmp/tmpxza5yg7d: line 3: figlet: command not found
+ERROR conda.cli.main_run:execute(148): `conda run figlet` failed. (See above for error)
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ run figlet
+-bash: run: command not found
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda run 'figlet'
+/tmp/tmp821n0o98: line 3: figlet: command not found
+ERROR conda.cli.main_run:execute(148): `conda run figlet` failed. (See above for error)
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ bash figlet "Eric"
+bash: figlet: No such file or directory
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda install bwa
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - bwa
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda install blast
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - blast
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda install samtools
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - samtools
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ conda install bedtools spades.py bcftools fastp multiqc
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - bcftools
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) ericforkuo1@cloudshell:~/hackbio/biocomputing$ 
